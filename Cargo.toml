@@ -5,3 +5,4 @@ members = ["krust_kernel"]
 panic = "abort"
 [profile.release]
 panic = "abort"
+lto = "fat"
