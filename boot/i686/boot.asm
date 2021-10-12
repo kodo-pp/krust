@@ -9,7 +9,10 @@ multiboot.checksum: dd multiboot.value.checksum
 section .text
 global _start
 extern main
+extern _end_kstack_mem
 _start:
+    lea esp, _end_kstack_mem
+    mov ebp, esp
     call main
 _start.hcf:
     cli

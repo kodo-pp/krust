@@ -3,6 +3,7 @@ members = ["krust_kernel"]
 
 [profile.dev]
 panic = "abort"
+opt-level = 1
 [profile.release]
 panic = "abort"
-lto = "fat"
+#lto = "fat"

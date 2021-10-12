@@ -21,7 +21,7 @@ SECTIONS {
 
     . = (. + 4095) & ~4095;
     _start_usable_mem = .;
-    _start_kstack_mem = .;
     . = . + 0x100000;
+    _end_kstack_mem = .;
     _start_kheap_mem = .;
 }
