@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Alexander Korzun.
 use core::fmt::Write;
 use core::panic::PanicInfo;
 

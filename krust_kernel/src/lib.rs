@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Alexander Korzun.
 #![no_std]
 #![feature(asm)]
 #![feature(once_cell)]

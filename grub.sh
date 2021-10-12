@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (c) 2021 Alexander Korzun.
 set -euo pipefail
 ./build.sh
 cd build

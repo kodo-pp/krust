@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Alexander Korzun.
 use super::Port;
 use core::fmt::{self, Display, Formatter};
 use lazy_static::lazy_static;

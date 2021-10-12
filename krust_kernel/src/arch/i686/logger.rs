@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Alexander Korzun.
 use crate::log::{Log, DefaultLogger};
 use core::fmt;
 use super::serial::COM1;

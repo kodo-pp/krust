@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Alexander Korzun.
 pub trait Log: core::fmt::Write {}
 pub trait DefaultLogger: Log + Default {}
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (c) 2021 Alexander Korzun.
 use core::convert::TryInto;
 
 /// An I/O port handle. A thin wrapper around the underlying port number for type safety and

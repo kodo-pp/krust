@@ -1,3 +1,6 @@
+; SPDX-License-Identifier: GPL-3.0-or-later
+; Copyright (c) 2021 Alexander Korzun.
+
 section .multiboot
 multiboot.value.magic equ 0x1BADB002
 multiboot.value.flags equ 0x00000000
