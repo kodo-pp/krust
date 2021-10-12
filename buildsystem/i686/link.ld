@@ -1,5 +1,5 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (c) 2021 Alexander Korzun.
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright (c) 2021 Alexander Korzun. */
 
 ENTRY(_start)
 
@@ -7,7 +7,7 @@ SECTIONS {
     . = 0x100000;
 
     .multiboot : ALIGN(4096) {
-        *(.multiboot)
+        KEEP(*(.multiboot))
     }
     .text : ALIGN(4096) {
         *(.text)

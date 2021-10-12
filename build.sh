@@ -32,7 +32,11 @@ nasm -f elf -o build/boot.o "boot/${KRUST_TARGET}/boot.asm"
 echo '... done' >&2
 
 echo 'Linking kernel... ' >&2
-ld.lld -T "buildsystem/${KRUST_TARGET}/link.ld" build/boot.o -L build/ -lkrust_kernel -o build/krust
+ld.lld \
+    -T "buildsystem/${KRUST_TARGET}/link.ld" \
+    -o build/krust \
+    --gc-sections \
+    build/boot.o build/libkrust_kernel.a
 if [[ $do_strip = 1 ]]; then
     llvm-strip --strip-all build/krust
 fi
