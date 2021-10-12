@@ -1,0 +1,7 @@
+[unstable]
+# I would like to give credit to Philipp Oppermann and his blog
+# <https://os.phil-opp.com/minimal-rust-kernel> for giving a wonderful example
+# of correct linkage with and usage of low-level memory-related routines from the
+# `compiler_builtins` crate.
+build-std = ["core", "compiler-builtins"]
+build-std-features = ["compiler-builtins-mem"]

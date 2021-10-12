@@ -4,6 +4,7 @@
 #![feature(panic_info_message)]
 
 mod arch;
+#[macro_use]
 mod log;
 mod runtime;
 
