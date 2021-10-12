@@ -20,7 +20,8 @@ echo 'Building kernel... ' >&2
 cargo +nightly build \
     --target="buildsystem/${KRUST_TARGET}/rustc-target.json" \
     "${cargo_opts[@]}" \
-    -Z build-std=core
+    -Z build-std=core,compiler_builtins \
+    -Z build-std-features=compiler-builtins-mem
 cp "target/rustc-target/${KRUST_BUILDTYPE}/libkrust_kernel.a" build/
 echo '... done' >&2
 

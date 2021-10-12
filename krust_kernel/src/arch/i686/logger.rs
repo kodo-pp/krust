@@ -11,15 +11,15 @@ impl fmt::Write for Logger {
         Ok(())
     }
 
-    fn write_char(&mut self, c: char) -> fmt::Result {
-        COM1.write_string("<write char>\n");
-        Ok(())
-    }
+    //fn write_char(&mut self, c: char) -> fmt::Result {
+    //    COM1.write_string("<write char>\n");
+    //    Ok(())
+    //}
 
-    fn write_fmt(&mut self, args: fmt::Arguments<'_>) -> fmt::Result {
-        COM1.write_string("<write args>\n");
-        Ok(())
-    }
+    //fn write_fmt(&mut self, args: fmt::Arguments<'_>) -> fmt::Result {
+    //    COM1.write_string("<write args>\n");
+    //    Ok(())
+    //}
 }
 
 impl Log for Logger {}

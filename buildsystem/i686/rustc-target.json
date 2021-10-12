@@ -4,13 +4,13 @@
     "crt-static-respected": true,
     "data-layout": "e-m:e-p:32:32-p270:32:32-p271:32:32-p272:64:64-f64:32:64-f80:32-n8:16:32-S128",
     "dynamic-linking": false,
-    "executables": false,
+    "executables": true,
     "has-elf-tls": true,
     "has-rpath": true,
     "is-builtin": false,
     "llvm-target": "i686-elf",
     "max-atomic-width": 64,
-    "os": "unknown",
+    "os": "none",
     "position-independent-executables": true,
     "pre-link-args": {
         "gcc": [
@@ -18,5 +18,7 @@
         ]
     },
     "target-pointer-width": "32",
-    "panic-strategy": "abort"
+    "panic-strategy": "abort",
+    "target-endian": "little",
+    "features": "-mmx,-sse,+soft-float"
 }
