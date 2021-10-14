@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2021 Alexander Korzun.
 
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.7)
 project(krust)
 
 set(KRUST_TARGET CACHE STRING "Target to build Krust for")
