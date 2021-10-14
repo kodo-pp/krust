@@ -9,6 +9,7 @@ add_custom_command(
         "${CMAKE_CURRENT_SOURCE_DIR}/boot/i686/boot.asm"
     MAIN_DEPENDENCY boot/i686/boot.asm
     COMMENT "Assembling the boot entry point"
+    VERBATIM
 )
 
 add_custom_command(
@@ -25,6 +26,7 @@ add_custom_command(
         "${CMAKE_CURRENT_BINARY_DIR}/boot.o"
         "${CMAKE_CURRENT_BINARY_DIR}/libkrust_kernel.a"
     COMMENT "Linking the kernel"
+    VERBATIM
 )
 add_custom_target(image-kernel ALL DEPENDS krust)
 
@@ -43,6 +45,7 @@ if ("${KRUST_ENABLE_GRUB_ISO}")
             "${CMAKE_CURRENT_BINARY_DIR}/krust"
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
         COMMENT "Building a bootable ISO image"
+        VERBATIM
     )
     add_custom_target(image-iso DEPENDS krust.iso)
 endif ()
