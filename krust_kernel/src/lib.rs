@@ -4,25 +4,22 @@
 #![feature(asm)]
 #![feature(once_cell)]
 #![feature(panic_info_message)]
+#![feature(default_alloc_error_handler)]
+
+extern crate alloc;
 
 mod arch;
 #[macro_use]
 mod log;
+mod init;
 mod runtime;
+
+use core::fmt::Write;
 
 #[no_mangle]
 unsafe fn main() -> ! {
-    let screen_out_ptr = 0xB8000 as *mut u8;
-    let screen_out = core::slice::from_raw_parts_mut(screen_out_ptr, 32768);
-    screen_out[0] = b'H';
-    screen_out[1] = 0x07;
-    screen_out[2] = b'e';
-    screen_out[3] = 0x07;
-    screen_out[4] = b'l';
-    screen_out[5] = 0x07;
-    screen_out[6] = b'l';
-    screen_out[7] = 0x07;
-    screen_out[8] = b'o';
-    screen_out[9] = 0x07;
+    init::init_once();
+    let vec = alloc::vec![1, 2, 3];
+    log_raw!("{:?}", vec);
     panic!("Test panic message");
 }
